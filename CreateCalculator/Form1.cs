@@ -5,16 +5,19 @@ namespace CreateCalculator
 {
     public partial class Form1 : Form
     {
+        private int temp = 20;
         Double val = 0;
         String text = "";
         bool op = false;
+
         public Form1()
         {
             InitializeComponent();
         }
+
         private void button_click(object sender, EventArgs e)
         {
-            if((output.Text=="0")||(op))
+            if ((output.Text == "0") || (op))
             {
                 output.Clear();
             }
@@ -35,13 +38,13 @@ namespace CreateCalculator
         }
         private void op_res(object sender, EventArgs e)
         {
-            switch(text)
+            switch (text)
             {
                 case "+":
-                    output.Text=(val+ Double.Parse(output.Text)).ToString();
+                    output.Text = (val + Double.Parse(output.Text)).ToString();
                     break;
                 case "-":
-                    output.Text=(val- Double.Parse(output.Text)).ToString();
+                    output.Text = (val - Double.Parse(output.Text)).ToString();
                     break;
                 case "*":
                     output.Text = (val * Double.Parse(output.Text)).ToString();
